@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="author" content="Nanda" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sewa | Binar Car Rental</title>
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="./css/output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header class="sticky top-0 z-50 bg-secondary font-sans">
+      <nav class="flex flex-wrap items-center justify-between px-[8%] py-5">
+        <div class="flex justify-between md:w-fit w-full">
+          <img
+            src="./images/logo.png"
+            alt="logo"
+            onclick="window.location.href='http://localhost:8000/'"
+            class="cursor-pointer"
+          />
+          <button id="menu-btn" class="md:hidden">
+            <img src="./images/button_menu.png" alt="button_menu" />
+          </button>
+        </div>
+        <div class="md:block hidden">
+          <ul class="flex items-center gap-6 text-preg">
+            <li>
+              <a href="http://localhost:8000/#our-services">Our Services</a>
+            </li>
+            <li><a href="http://localhost:8000/#why-us">Why Us</a></li>
+            <li><a href="http://localhost:8000/#testimony">Testimonial</a></li>
+            <li><a href="http://localhost:8000/#faq">FAQ</a></li>
+            <li>
+              <button
+                class="rounded-sm bg-button px-3 py-2 text-button text-white"
+              >
+                Register
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div id="hiddenDiv" class="hidden">
+          <div class="absolute top-0 right-0 min-h-screen w-full flex flex-row">
+            <div
+              id="overlay"
+              class="w-1/2 min-h-screen bg-black opacity-50"
+            ></div>
+            <div class="w-1/2 min-h-screen pl-6 pr-[8%] pt-6 bg-white">
+              <div class="flex flex-row justify-between mb-6">
+                <a class="text-title" href="#hero-section">BCR</a>
+                <button id="close-btn">
+                  <img src="./images/button_close.png" alt="button_close" />
+                </button>
+              </div>
+              <ul class="flex flex-col items-start gap-6 text-preg">
+                <li><a href="#our-services">Our Services</a></li>
+                <li><a href="#why-us">Why Us</a></li>
+                <li><a href="#testimony">Testimonial</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li>
+                  <button
+                    class="rounded-sm bg-button px-3 py-2 text-button text-white"
+                  >
+                    Register
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="min-h-[100vh] w-full flex flex-col bg-white mx-0 font-sans">
+        <!-- Hero Section start -->
+        <section id="hero-section" class="md:h-[80vh] h-[90vh] bg-secondary">
+          <div class="relative flex lg:items-center items-start h-full px-[8%]">
+            <div class="flex flex-col lg:gap-6 gap-3">
+              <h1 class="text-h1 max-sm:w-[350px] sm:w-[450px] md:w-[560px]">
+                Sewa & Rental Mobil Terbaik di Kawasan Probolinggo
+              </h1>
+              <p class="text-plight w-[420px] max-xl:w-[380px] max-md:w-full">
+                Selamat datang di Binar Car Rental. Kami menyediakan mobil
+                kualitas terbaik dengan harga terjangkau. Selalu siap melayani
+                kebutuhanmu untuk sewa mobil selama 24 jam.
+              </p>
+            </div>
+            <div
+              class="absolute w-[720px] max-sm:w-[400px] max-md:w-[550px] max-lg:w-[600px] max-xl:w-[600px] bottom-0 right-0"
+            >
+              <img src="./images/img_car.png" alt="car.png" />
+            </div>
+          </div>
+        </section>
+        <!-- Hero Section end -->
+
+        <!-- Search Section start -->
+        <section id="search" class="flex flex-col gap-8">
+          <div
+            class="relative shadow-lg shadow-abu rounded-xl p-6 mx-[11%] mt-[-50px] bg-white"
+          >
+            <div
+              class="flex max-md:flex-col flex-row gap-4 justify-center max-md:items-center items-end"
+            >
+              <div
+                class="flex flex-col gap-1 w-full font-rubik text-slight text-neutral04"
+              >
+                <label for="driver">Tipe Driver</label>
+                <select
+                  id="driver"
+                  name="driver"
+                  class="h-9 px-3 border border-neutral02 rounded-sm text-neutral03"
+                >
+                  <option value="" hidden>Pilih Tipe Driver</option>
+                  <option value="true">Dengan Sopir</option>
+                  <option value="true">Tanpa Sopir (Lepas Kunci)</option>
+                </select>
+              </div>
+              <div
+                class="flex flex-col gap-1 w-full font-rubik text-slight text-neutral04"
+              >
+                <label for="date">Tanggal</label>
+                <input
+                  type="date"
+                  id="date"
+                  name="date"
+                  placeholder="Pilih Tanggal"
+                  class="h-9 px-3 border border-neutral02 rounded-sm text-neutral03"
+                />
+              </div>
+              <div
+                class="flex flex-col gap-1 w-full font-rubik text-slight text-neutral04"
+              >
+                <label for="time">Waktu Jemput/Ambil</label>
+                <input
+                  type="time"
+                  id="time"
+                  name="time"
+                  laceholder="Pilih Waktu"
+                  class="h-9 px-3 border border-neutral02 rounded-sm text-neutral03"
+                />
+              </div>
+              <div
+                class="flex flex-col gap-1 w-full font-rubik text-slight text-neutral04"
+              >
+                <label for="number">Jumlah Penumpang (optional)</label>
+                <input
+                  type="number"
+                  id="number"
+                  name="number"
+                  placeholder="Jumlah Penumpang"
+                  class="h-9 px-3 border border-neutral02 rounded-sm text-neutral03"
+                />
+              </div>
+              <button
+                id="btn-search"
+                class="rounded-sm bg-button px-3 py-2 h-9 w-full text-button text-white"
+              >
+                Cari Mobil
+              </button>
+            </div>
+          </div>
+          <!-- container untuk list car nanti -->
+          <div
+            id="list-cars"
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-[11%] font-sans"
+          ></div>
+          <div id="count-cars" class="flex justify-center mx-[11%]"></div>
+        </section>
+        <!-- Search Section end -->
+      </div>
+    </main>
+
+    <footer>
+      <div
+        class="flex md:flex-row flex-col justify-between gap-6 font-sans mx-[8%] mt-32 mb-20"
+      >
+        <div class="flex flex-col gap-4 text-plight">
+          <p>
+            Jalan Suroyo No. 161 Mayangan Kota <br />
+            Probolinggo 672000
+          </p>
+          <p>binarcarrental@gmail.com</p>
+          <p>081-233-334-808</p>
+        </div>
+        <div>
+          <ul class="flex flex-col gap-4 list-none text-preg">
+            <li><a href="#our-services">Our Services</a></li>
+            <li><a href="#why-us">Why Us</a></li>
+            <li><a href="#testimony">Testimonial</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="flex flex-col gap-4">
+          <div class="text-plight">
+            <p>Connect with Us</p>
+          </div>
+          <div class="flex flex-row gap-1">
+            <div class="h-10 w-10">
+              <img src="./images/icon_facebook.png" alt="facebook-logo" />
+            </div>
+            <div class="h-10 w-10">
+              <img src="./images/icon_instagram.png" alt="insta-logo" />
+            </div>
+            <div class="h-10 w-10">
+              <img src="./images/icon_twitter.png" alt="twitter-logo" />
+            </div>
+            <div class="h-10 w-10">
+              <img src="./images/icon_mail.png" alt="email-logo" />
+            </div>
+            <div class="h-10 w-10">
+              <img src="./images/icon_twitch.png" alt="twitch-logo" />
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col gap-4 text-plight">
+          <p>Copyright Binar 2024</p>
+          <img src="./images/logo.png" alt="Logo BCR" width="100px" />
+        </div>
+      </div>
+    </footer>
+
+    <script type="text/javascript" src="./scripts/app.js"></script>
+    <script type="text/javascript" src="./scripts/binar.js"></script>
+    <script type="text/javascript" src="./scripts/app.example.js"></script>
+    <script type="text/javascript" src="./scripts/car.example.js"></script>
+    <script type="text/javascript" src="./scripts/main.example.js"></script>
+  </body>
+</html>
